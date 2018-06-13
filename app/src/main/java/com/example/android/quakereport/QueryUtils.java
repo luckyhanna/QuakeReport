@@ -59,7 +59,7 @@ public final class QueryUtils {
                 double magnitude = properties.getDouble("mag");
                 String place = properties.getString("place");
                 long time = properties.getLong("time");
-                earthquakes.add(new Earthquake(BigDecimal.valueOf(magnitude), place, time));
+                earthquakes.add(new Earthquake(magnitude, place, time));
             }
 
         } catch (JSONException e) {

@@ -4,23 +4,23 @@ import java.math.BigDecimal;
 
 public class Earthquake {
 
-    private BigDecimal mMagnitude;
+    private double mMagnitude;
 
     private String mPlace;
 
     private Long mTime;
 
-    public Earthquake(BigDecimal magnitude, String place, Long time) {
+    public Earthquake(double magnitude, String place, Long time) {
         this.mMagnitude = magnitude;
         this.mPlace = place;
         this.mTime = time;
     }
 
-    public BigDecimal getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
-    public void setMagnitude(BigDecimal mMagnitude) {
+    public void setMagnitude(double mMagnitude) {
         this.mMagnitude = mMagnitude;
     }
 
