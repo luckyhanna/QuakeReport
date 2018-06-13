@@ -1,7 +1,9 @@
 package com.example.android.quakereport;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -38,7 +40,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         TextView dateTv = (TextView) listItemView.findViewById(R.id.date_tv);
         TextView time = (TextView) listItemView.findViewById(R.id.time_tv);
 
-        Earthquake currentQuake = getItem(position);
+        final Earthquake currentQuake = getItem(position);
 
         magnitude.setText(formatMagnitude(currentQuake.getMagnitude()));
         // Set the proper background color on the magnitude circle.
@@ -68,6 +70,17 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         dateTv.setText(formatDate(date));
 
         time.setText(formatTime(date));
+
+        /*listItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = currentQuake.getUrl();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                if (intent.resolveActivity(getContext().getPackageManager()) != null) {
+                    getContext().startActivity(intent);
+                }
+            }
+        });*/
 
         return listItemView;
     }
