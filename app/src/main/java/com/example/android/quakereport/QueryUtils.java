@@ -27,7 +27,7 @@ public final class QueryUtils {
     /** Tag for the log messages */
     public static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
-    public static final String USGS_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=4&limit=10";
+    public static final String USGS_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=5&limit=10";
 
     /**
      * Create a private constructor because no one should ever create a {@link QueryUtils} object.
